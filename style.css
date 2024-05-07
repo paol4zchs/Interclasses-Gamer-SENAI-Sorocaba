@@ -1,0 +1,381 @@
+/* ESTILO GERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.interface{
+    max-width: 1280;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+
+.github button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: rgb(252, 90, 95);
+    color: rgb(255, 255, 255);
+    border: 0;
+    border-radius: 30px;
+    cursor:pointer;
+    width: 230px;
+    height:60px;
+}
+
+.github button:hover{
+    box-shadow:  0 0 8px ;
+}
+
+h2.titulo{
+    color: rgb(255, 255, 255);
+    font-size: 38px;
+    text-align:center;
+}
+
+h2.titulo span{
+    color: rgb(252, 90, 95);
+}
+
+
+
+
+
+
+/* ESTILO CABEÇALHO */
+header{
+    padding: 40px 1%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    display: inline-block;
+    transition: 5s;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 60px;
+    font-size: large;
+    font-weight: 500;
+}
+
+
+
+header a:hover{
+    color: rgb(252, 90, 95);
+    transform: scale(5s);
+}
+
+
+
+.logo img{
+    
+    height: 120px;
+    width: 120px;
+    margin: 20px;
+}
+
+
+
+
+/* ESTILO TOPO */
+
+
+
+section.topo-site{
+    padding: 60px 4%;
+}
+
+section.topo-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;/*espaçamento de elementos*/
+}
+
+.topo-site h1{
+    color: rgb(255, 255, 255);
+    font-size: 42px;
+    line-height: 60px;  /*distancia uma linha da outra*/
+}
+
+.topo-site h1 span{
+    color: rgb(252, 90, 95);/*estiliza somente a escrita dentro do span*/
+}
+
+.topo-site .txt-topo-site p{
+    color: rgb(255, 255, 255);
+    margin: 55px;/*distancia os elementos*/
+    font-size: larger;
+}
+
+
+@keyframes animaçao{
+    0%{
+        top:0;
+    }
+    100%{
+        top:30px;
+    }
+}
+
+.topo-site .img-topo-site img{
+    position:relative;/*comandos:top,left,bottom,right só funcionam com elementos diferentes de static*/
+    animation: animaçao 2s/*tempo animacao*/ ease-in-out/*velocidade*/ infinite/*animaçao infinita*/ alternate/*caminha do 0-100 e do 100-0*/;
+    border-radius: 50px;
+    width: 350px;
+    height: 350px;
+}
+
+section .divs{
+    padding: 85 4%;
+}
+
+.divs .divs-box{
+    color: rgb(252, 90, 95);
+    padding: 40px;
+    border: 3px;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: 1.0s;
+}
+
+.divs .divs-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgb(252, 90, 95);
+}
+
+
+
+section.prj {
+    padding: 80px 4%;
+}
+
+section.prj .flex {
+    justify-content: space-around;
+}
+
+
+.divsrolamento{
+    width: 360px;
+    height: 440px;
+    margin: 60px;
+    background-size: cover;/*adapta a img dentro da div*/
+    background-position: 100%/*horizontal*/ 0%/*vertical, faz o efeito rolagem comecar com o topo da img*/;
+    transition: 3s;/*suavidade do rolamento*/
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;/*faz com que o efeito rolamento funcione*/
+}
+
+.divsrolamento:hover{/*efeito rolamento*/
+    background-position: 100%/*horizontal*/ 100%/*vertical, faz o efeito rolagem ir para o final da imagem*/;
+    /*  box-shadow: 0 0 8px rgb(255, 255, 255);  */
+}
+
+.overlay{
+    position: absolute;/*trabalha dentro da classe .paola por conta do comando relative*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 2, 32, 0.438);
+    border-radius: 40px;
+    /*essas propriedades alinham o texto no centro da div*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*essas propriedades alinham o texto no centro da div*/
+    
+}
+
+.overlay a{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+}
+
+section.secao{
+    padding: 50px 7%;
+    margin-top: 80px;
+    border: solid 5px rgb(252, 90, 95);
+    margin: 70px;
+    border-radius: 20px;
+    
+    
+}
+
+section.secao .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;/*espaçamento de elementos*/
+}
+
+.secao h1{
+    color: rgb(255, 255, 255);
+    font-size: 42px;
+    line-height: 60px;  /*distancia uma linha da outra*/
+}
+
+
+
+.secao .txt-secao li{
+    color: rgb(255, 255, 255);
+    margin: 55px;/*distancia os elementos*/
+    font-size: large;
+    margin-top: 10px;
+    gap: 30px;
+}
+.imgs img{
+   border-radius: 20px; 
+   width: 350px;
+    height: 350px;
+}
+
+#botaoQueLevaPraCima {
+    display: block;
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    border-radius: 100%;
+    right: 20px; 
+    bottom: 20px;
+    z-index: 999;
+    background-image: url(img/setinha.png);
+    background-position: center center;
+    transition: 0.5s;
+    background-size: cover;
+}
+
+#botaoQueLevaPraCima.active {
+    display: block;
+    transition: 0.5s;
+}
+
+
+section.certificados{
+    padding: 85px 4%;;
+}
+
+.certificados .certificados-box {/* divs dos certificados*/
+    color:  rgb(255, 255, 255);
+    padding: 40px;/* espaçamento geral*/
+    border: 2px solid rgb(99, 0, 192);
+     border-radius: 15px;
+    margin-top: 60px;/*espaçamento de cima ente a escrita e a box*/
+    transition: 1s;/*determina a suavidade do zoom transform*/
+    height: 400px;
+    width: 280px;
+   
+}
+
+.certificados .certificados-box:hover{/* divs dos certificados*/
+    transform: scale(1.05);/* efeito zoom*/
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.788);/*efeito sombreado*/
+}
+
+
+
+.certificados .certificados-box h3{/* divs dos certificados*/
+    font-size: 20px;
+    margin: 5px 0px;/* espaçamento quer tera fora da imagem cima/baixo e esquerda/direita*/
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+section.certificados .flex{
+    gap: 60px;/*espaçamento de elementos*/
+} 
+
+.certificados .certificados-box img{/* divs dos certificados*/
+  align-items: center;
+   
+}
+
+.redes{
+    margin-top: 10px;
+}
+
+
+
+  .regulamento{
+    background-color: #000;
+  }
+
+  .why_section .box {
+    margin-top: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  
+  .why_section .box .img-box {
+    margin-bottom: 20px;
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    min-height: 120px;
+    border-radius: 100%;
+    border: 3px solid  rgb(99, 0, 192);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .why_section .box .img-box img {
+    width: 55px;
+    height: auto;
+    fill: #00204a;
+  }
+  
+  .why_section .box h5 {
+    font-weight: 550;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .why_section .box li {
+    margin-bottom: 20;
+    color: white;
+    font-size: large;
+    margin: 20px;
+  }
+  
+  
